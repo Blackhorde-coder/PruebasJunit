@@ -25,24 +25,33 @@ public class Calculadora {
         ans = a - b;
         return ans;
     }
-    
-    public int add (int v)
-    {
+
+    public int add(int v) {
         ans += v;
-        return  ans;
-    }
-    public int sub (int v)
-    {
-        ans -=v;
         return ans;
     }
-    public int ans()
-    {
+
+    public int sub(int v) {
+        ans -= v;
         return ans;
     }
-        public void clearAns ()
-    {
-        ans= 0;
+
+    public int ans() {
+        return ans;
+    }
+
+    public void clearAns() {
+        ans = 0;
+    }
+
+    public int div(int a, int b) {
+        if(b == 0)
+        {
+            throw new ArithmeticException("NO PUEDES DIVIDIR POR CERO!!!");
+        }
+        ans = a/b;
+        return ans;
+
     }
 
 }

@@ -5,39 +5,37 @@
  */
 package Calculadora;
 
-import org.junit.After;
-import org.junit.Test;
+import org.junit.*;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
-
 public class CalculadoraTest {
+
     Calculadora cal;
+
     @Before
-    public void before ()
-    {
+    public void before() {
         System.out.println("before()");
         cal = new Calculadora();
 
     }
+
     @After
-    public void after()
-    {
+    public void after() {
         System.out.println("after()");
         cal.clearAns();
     }
-    
+
     @Test
-    public void testSum ()
-    {
+    public void testSum() {
         System.out.println("sum()");
-        int resultado = cal.add(3,2);
+        int resultado = cal.add(3, 2);
         int esperado = 5;
         assertEquals(esperado, resultado);
     }
+
     @Test
-    public void testAnsSkum ()
-    {
+    public void testAnsSkum() {
         System.out.println("ansSum");
         cal.add(3, 2);
         int resultado = cal.ans();
@@ -45,9 +43,16 @@ public class CalculadoraTest {
         assertEquals(esperado, resultado);
     }
 
-    
-    
-    
+    @Test()
+    public void testDiv() {
+        cal.div(5, 2);
+    }
+
+    @Test(expected = ArithmeticException.class)
+    public void testDivPorCero() {
+        cal.div(5, 0);
+    }
+
 //    public void testSuma() {
 //        System.out.println("suma");
 //        int resultado = Calculadora.suma(2,3);
@@ -61,5 +66,4 @@ public class CalculadoraTest {
 //        int esperado = 1;
 //        assertEquals(esperado, resultado);
 //    }
-
 }
