@@ -51,7 +51,20 @@ public class Calculadora {
         }
         ans = a/b;
         return ans;
+    }
+    public void operacionOptima ()
+    {
+        try
+        {
+                    Thread.sleep(2000);
 
+        } catch (InterruptedException e)
+        {
+        }
+    }
+    public void bucleInfinito ()
+    {
+        for (;;);
     }
 
 }

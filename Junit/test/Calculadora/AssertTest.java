@@ -22,7 +22,9 @@ public class AssertTest {
     }
     
     @BeforeClass
-    public static void setUpClass() {
+    public static void setUpClass() 
+    {
+         
     }
     
     @AfterClass

@@ -11,19 +11,28 @@ import org.junit.Before;
 
 public class CalculadoraTest {
 
-    Calculadora cal;
+   static Calculadora cal;
+
+    @BeforeClass
+    public static void beforeClass() {
+        System.out.println("beforeclass()");
+        cal = new Calculadora();
+    }
+
+    @AfterClass
+    public static void afterClass() {
+        System.out.println("afterClass");
+    }
 
     @Before
     public void before() {
         System.out.println("before()");
-        cal = new Calculadora();
 
     }
 
     @After
     public void after() {
         System.out.println("after()");
-        cal.clearAns();
     }
 
     @Test
@@ -45,14 +54,27 @@ public class CalculadoraTest {
 
     @Test()
     public void testDiv() {
+        System.out.println("testDiv()");
         cal.div(5, 2);
     }
 
     @Test(expected = ArithmeticException.class)
     public void testDivPorCero() {
+        System.out.println("tesDivPorCero");
         cal.div(5, 0);
     }
 
+    @Test(timeout = 100)
+    public void testAlgoritmoOptimo() {
+        System.out.println("testAlgoritmoOptimo");
+        cal.operacionOptima();
+    }
+
+    @Test(timeout = 100)
+    public void bucleInfinito() {
+        System.out.println("bucleInfinito");
+        cal.bucleInfinito();
+    }
 //    public void testSuma() {
 //        System.out.println("suma");
 //        int resultado = Calculadora.suma(2,3);
