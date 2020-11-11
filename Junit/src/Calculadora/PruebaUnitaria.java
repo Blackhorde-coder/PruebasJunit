@@ -17,9 +17,7 @@ public class PruebaUnitaria {
 
     public static void main(String[] args) 
     {
-        Calculadora c = new Calculadora();
-        int resultado = c.suma(3, 3);
-        System.out.println(resultado);
+
     }
     
 }
