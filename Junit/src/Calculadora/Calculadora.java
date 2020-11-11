@@ -3,19 +3,24 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package junit;
+package Calculadora;
 
 /**
  *
  * @author Hernan Mauricio Pena leg: 111708
  */
-public class Junit {
+public class Calculadora {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static int suma(int a, int b) {
+        return a + b;
     }
+
+    public static int resta(int a, int b) {
+        return a - b;
+    }
+
+    public Calculadora() {
+    }
+    
     
 }
