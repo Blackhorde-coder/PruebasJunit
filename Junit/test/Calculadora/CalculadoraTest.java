@@ -75,17 +75,5 @@ public class CalculadoraTest {
         System.out.println("bucleInfinito");
         cal.bucleInfinito();
     }
-//    public void testSuma() {
-//        System.out.println("suma");
-//        int resultado = Calculadora.suma(2,3);
-//        int esperado = 5;
-//        assertEquals(esperado, resultado);
-//    }
-//    @Test
-//    public void testResta() {
-//        System.out.println("resta");
-//        int resultado = Calculadora.resta(3, 2);
-//        int esperado = 1;
-//        assertEquals(esperado, resultado);
-//    }
+
 }
